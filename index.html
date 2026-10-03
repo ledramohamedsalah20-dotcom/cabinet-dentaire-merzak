@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Merzak Smile | Clinique Dentaire à Alger</title>
+
+  <meta
+    name="description"
+    content="Merzak Smile, clinique dentaire à Alger. Soins dentaires, implantologie, esthétique du sourire, zirconia, prothèses et soins conservateurs."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --navy: #0d2430;
+      --navy-light: #153745;
+      --blue: #1c6477;
+      --blue-light: #eaf5f6;
+      --gold: #c9a96b;
+      --gold-dark: #a9874a;
+      --cream: #f9f7f1;
+      --white: #ffffff;
+      --text: #12232b;
+      --muted: #6e7b81;
+      --border: rgba(13, 36, 48, 0.11);
+      --shadow: 0 20px 60px rgba(13, 36, 48, 0.1);
+      --radius: 26px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      margin-bottom: 18px;
+    }
+
+    .section-tag::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      max-width: 700px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      max-width: 650px;
+      margin-top: 20px;
+    }
+
+    /* ===================================
+       TOP BAR
+    =================================== */
+
+    .top-bar {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+    }
+
+    .top-bar-content {
+      min-height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .top-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .top-dot {
+      width: 7px;
+      height: 7px;
+      background: #53d292;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(83, 210, 146, 0.12);
+    }
+
+    /* ===================================
+       NAVBAR
+    =================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    header.scrolled {
+      border-color: var(--border);
+      box-shadow: 0 10px 40px rgba(13, 36, 48, 0.06);
+    }
+
+    nav {
+      min-height: 83px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-symbol {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      position: relative;
+      border: 1.5px solid var(--gold);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-symbol svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--navy);
+    }
+
+    .logo-text strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: -0.5px;
+      color: var(--navy);
+    }
+
+    .logo-text small {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 2.8px;
+      color: var(--gold-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #405159;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-dark);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 47px;
+      padding: 0 22px;
+      background: var(--navy);
+      color: white !important;
+      border-radius: 50px;
+      transition: 0.25s;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+    }
+
+    .menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin: 5px auto;
+      background: var(--navy);
+    }
+
+    /* ===================================
+       HERO
+    =================================== */
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 18% 30%,
+          rgba(201, 169, 107, 0.13),
+          transparent 28%
+        ),
+        linear-gradient(110deg, #fbfaf6 0%, #f5f7f5 45%, #e7f0ef 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(201, 169, 107, 0.17);
+      border-radius: 50%;
+      left: -270px;
+      top: 90px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(28, 100, 119, 0.06);
+      right: -80px;
+      bottom: -70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: center;
+      gap: 75px;
+      padding: 80px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 15px;
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: 0 7px 30px rgba(13, 36, 48, 0.04);
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge span:first-child {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #51c98b;
+    }
+
+    .hero h1 {
+      font-size: clamp(54px, 6vw, 82px);
+      line-height: 0.97;
+      letter-spacing: -3px;
+      color: var(--navy);
+    }
+
+    .hero h1 em {
+      color: var(--gold-dark);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 27px 0 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      min-height: 55px;
+      padding: 0 27px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(13, 36, 48, 0.16);
+    }
+
+    .btn-outline {
+      border-color: rgba(13, 36, 48, 0.18);
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--navy);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      border-color: var(--gold);
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 38px;
+      gap: 23px;
+    }
+
+    .mini-feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #4b5e66;
+      font-weight: 600;
+    }
+
+    .mini-feature-check {
+      width: 19px;
+      height: 19px;
+      background: rgba(28, 100, 119, 0.1);
+      border-radius: 50%;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    /* hero image */
+
+    .hero-visual {
+      position: relative;
+      min-height: 595px;
+    }
+
+    .hero-main-image {
+      position: absolute;
+      width: 79%;
+      height: 540px;
+      right: 0;
+      top: 5px;
+      border-radius: 180px 180px 28px 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main-image img {
+      height: 100%;
+      filter: saturate(0.85);
+    }
+
+    .hero-main-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(13, 36, 48, 0) 55%,
+        rgba(13, 36, 48, 0.27)
+      );
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      left: 0;
+      bottom: 62px;
+      width: 250px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(13, 36, 48, 0.14);
+    }
+
+    .hero-floating-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .hero-floating-card strong {
+      display: block;
+      font-size: 17px;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .hero-floating-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .hero-open {
+      position: absolute;
+      right: -5px;
+      bottom: 13px;
+      background: var(--navy);
+      color: white;
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 15px 35px rgba(13, 36, 48, 0.2);
+    }
+
+    .hero-open small {
+      display: block;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 4px;
+    }
+
+    .hero-open strong {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+    }
+
+    /* ===================================
+       TRUST STRIP
+    =================================== */
+
+    .trust-strip {
+      background: var(--navy);
+      color: white;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 34px 25px;
+      border-right: 1px solid rgba(255, 255, 255, 0.09);
+      text-align: center;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin-bottom: 6px;
+    }
+
+    .trust-item span {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===================================
+       ABOUT
+    =================================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 85px;
+    }
+
+    .about-images {
+      position: relative;
+      height: 625px;
+    }
+
+    .about-img-main {
+      width: 78%;
+      height: 555px;
+      overflow: hidden;
+      border-radius: 28px;
+    }
+
+    .about-img-main img {
+      height: 100%;
+    }
+
+    .about-img-small {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 52%;
+      height: 270px;
+      overflow: hidden;
+      border-radius: 25px;
+      border: 8px solid white;
+      box-shadow: var(--shadow);
+    }
+
+    .about-img-small img {
+      height: 100%;
+    }
+
+    .about-decoration {
+      position: absolute;
+      top: -25px;
+      right: 55px;
+      width: 100px;
+      height: 100px;
+      border-top: 1px solid var(--gold);
+      border-right: 1px solid var(--gold);
+      border-radius: 0 40px 0 0;
+    }
+
+    .about-list {
+      margin-top: 30px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .about-row-icon {
+      flex: 0 0 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 13px;
+    }
+
+    .about-row strong {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .about-row p {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    /* ===================================
+       SERVICES
+    =================================== */
+
+    .services {
+      background: var(--cream);
+    }
+
+    .services-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      margin-bottom: 55px;
+    }
+
+    .services-head p {
+      max-width: 440px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid rgba(13, 36, 48, 0.07);
+      border-radius: var(--radius);
+      padding: 34px 30px;
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      transition: 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: var(--blue-light);
+      border-radius: 50%;
+      right: -70px;
+      bottom: -70px;
+      transition: 0.35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .service-card:hover::after {
+      transform: scale(1.5);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 17px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      color: var(--blue);
+    }
+
+    .service-icon svg {
+      width: 27px;
+      height: 27px;
+      stroke-width: 1.6;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .service-link {
+      margin-top: auto;
+      padding-top: 25px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold-dark);
+    }
+
+    /* ===================================
+       SMILE / CTA SECTION
+    =================================== */
+
+    .smile-section {
+      padding: 115px 0;
+      background: white;
+    }
+
+    .smile-box {
+      min-height: 560px;
+      background: var(--navy);
+      border-radius: 36px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .smile-content {
+      color: white;
+      padding: 75px 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .smile-content .section-tag {
+      color: var(--gold);
+    }
+
+    .smile-content h2 {
+      font-size: clamp(40px, 5vw, 60px);
+      line-height: 1.04;
+      max-width: 500px;
+    }
+
+    .smile-content p {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.8;
+      font-size: 16px;
+      margin: 23px 0 30px;
+      max-width: 500px;
+    }
+
+    .smile-image {
+      position: relative;
+    }
+
+    .smile-image img {
+      height: 100%;
+      min-height: 560px;
+    }
+
+    .smile-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(
+        90deg,
+        var(--navy) 0%,
+        rgba(13, 36, 48, 0.08) 38%,
+        transparent 100%
+      );
+    }
+
+    .btn-gold {
+      align-self: flex-start;
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-gold:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
+
+    /* ===================================
+       PROCESS
+    =================================== */
+
+    .process {
+      background: var(--cream);
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 65px;
+    }
+
+    .process-header .section-title,
+    .process-header .section-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: "";
+      height: 1px;
+      background: rgba(13, 36, 48, 0.12);
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 36px;
+    }
+
+    .step {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .step-number {
+      margin: 0 auto 25px;
+      width: 72px;
+      height: 72px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: var(--gold-dark);
+      box-shadow: 0 10px 30px rgba(13, 36, 48, 0.05);
+    }
+
+    .step h3 {
+      font-size: 21px;
+      color: var(--navy);
+      margin-bottom: 9px;
+    }
+
+    .step p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 220px;
+      margin: auto;
+    }
+
+    /* ===================================
+       LOCATIONS
+    =================================== */
+
+    .locations {
+      background: white;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .locations-list {
+      margin-top: 34px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .location-card {
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 20px;
+      display: flex;
+      gap: 18px;
+      transition: 0.25s;
+    }
+
+    .location-card:hover {
+      border-color: rgba(201, 169, 107, 0.55);
+      box-shadow: 0 10px 35px rgba(13, 36, 48, 0.06);
+    }
+
+    .location-icon {
+      width: 47px;
+      height: 47px;
+      flex: 0 0 47px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+    }
+
+    .location-card h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+
+    .location-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+    }
+
+    .location-card a {
+      display: inline-block;
+      color: var(--gold-dark);
+      margin-top: 7px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .location-photo {
+      height: 600px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .location-photo img {
+      height: 100%;
+    }
+
+    .location-overlay {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      right: 22px;
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(13, 36, 48, 0.88);
+      backdrop-filter: blur(12px);
+      color: white;
+    }
+
+    .location-overlay small {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .location-overlay strong {
+      font-family: "Playfair Display", serif;
+      display: block;
+      font-size: 24px;
+      margin: 7px 0;
+    }
+
+    .location-overlay p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* ===================================
+       APPOINTMENT
+    =================================== */
+
+    .appointment {
+      background:
+        linear-gradient(
+          rgba(13, 36, 48, 0.91),
+          rgba(13, 36, 48, 0.91)
+        ),
+        url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      color: white;
+      padding: 100px 0;
+    }
+
+    .appointment-content {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .appointment .section-tag {
+      color: var(--gold);
+    }
+
+    .appointment .section-tag::before {
+      background: var(--gold);
+    }
+
+    .appointment h2 {
+      font-size: clamp(42px, 6vw, 67px);
+      line-height: 1.05;
+    }
+
+    .appointment p {
+      max-width: 650px;
+      margin: 24px auto 32px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .appointment-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .appointment .btn-outline {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .appointment .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    /* ===================================
+       FOOTER
+    =================================== */
+
+    footer {
+      background: #091a22;
+      color: white;
+      padding: 70px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.7fr 0.7fr 1fr;
+      gap: 55px;
+      padding-bottom: 55px;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 330px;
+      margin-top: 20px;
+    }
+
+    footer .logo-text strong {
+      color: white;
+    }
+
+    footer .logo-symbol svg {
+      stroke: white;
+    }
+
+    .footer-title {
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 11px 0;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-contact {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-phone {
+      color: white;
+      font-size: 19px;
+      display: block;
+      margin: 11px 0 5px;
+      font-weight: 700;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 12px;
+    }
+
+    /* ===================================
+       WHATSAPP
+    =================================== */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      border-radius: 100px;
+      padding: 10px 18px 10px 10px;
+      box-shadow: 0 12px 35px rgba(37, 211, 102, 0.35);
+      font-weight: 700;
+      font-size: 13px;
+      transition: 0.25s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .whatsapp-icon {
+      width: 41px;
+      height: 41px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      color: #25d366;
+      border-radius: 50%;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    /* reveal animations */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ===================================
+       RESPONSIVE
+    =================================== */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 90px;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px;
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 0.25s;
+      }
+
+      .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .locations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions,
+      .hero-features {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        width: min(650px, 100%);
+        margin: auto;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .smile-box {
+        grid-template-columns: 1fr;
+      }
+
+      .smile-image {
+        height: 480px;
+      }
+
+      .smile-image img {
+        min-height: unset;
+        height: 100%;
+      }
+
+      .smile-image::before {
+        background: linear-gradient(
+          180deg,
+          var(--navy),
+          rgba(13, 36, 48, 0) 35%
+        );
+      }
+
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+      }
+
+      .process-steps::before {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .location-photo {
+        height: 500px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .top-bar .top-item:last-child {
+        display: none;
+      }
+
+      .top-bar-content {
+        justify-content: center;
+      }
+
+      .hero-grid {
+        padding: 55px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-visual {
+        min-height: 475px;
+      }
+
+      .hero-main-image {
+        width: 88%;
+        height: 430px;
+      }
+
+      .hero-floating-card {
+        width: 210px;
+        bottom: 14px;
+        padding: 19px;
+      }
+
+      .hero-open {
+        display: none;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item {
+        border-bottom: 1px solid rgba(255,255,255,.08);
+      }
+
+      .about-grid {
+        gap: 45px;
+      }
+
+      .about-images {
+        height: 490px;
+      }
+
+      .about-img-main {
+        height: 440px;
+        width: 85%;
+      }
+
+      .about-img-small {
+        height: 210px;
+        width: 55%;
+      }
+
+      .services-head {
+        display: block;
+      }
+
+      .services-head p {
+        margin-top: 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .smile-section {
+        padding: 75px 0;
+      }
+
+      .smile-content {
+        padding: 55px 28px;
+      }
+
+      .smile-image {
+        height: 370px;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .location-photo {
+        height: 430px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+        line-height: 2;
+      }
+
+      .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        padding-right: 11px;
+      }
+
+      .whatsapp-float > span:last-child {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+
+      <div class="top-item">
+        <span class="top-dot"></span>
+        Ouvert 24h/24 • 7j/7
+      </div>
+
+      <div class="top-item">
+        Kouba & Gué de Constantine • Alger
+      </div>
+
+      <div class="top-item">
+        Consultation gratuite
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- NAVBAR -->
+
+  <header id="header">
+    <div class="container">
+
+      <nav>
+
+        <a href="#" class="logo">
+
+          <span class="logo-symbol">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.5 3.5C5 4.1 3.7 6.5 4.4 9.1c.5 1.8 1.7 3.1 2 5.4.5 3.4 1.3 5.8 2.7 5.8 1 0 1.1-3.8 2.9-3.8s1.9 3.8 2.9 3.8c1.4 0 2.2-2.4 2.7-5.8.3-2.3 1.5-3.6 2-5.4.7-2.6-.6-5-3.1-5.6-2.2-.5-3.4 1-4.5 1s-2.3-1.5-4.5-1z"
+                stroke="currentColor"
+                stroke-width="1.6"
+              />
+            </svg>
+          </span>
+
+          <span class="logo-text">
+            <strong>Merzak Smile</strong>
+            <small>Dental Clinic</small>
+          </span>
+
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#clinique">La clinique</a></li>
+          <li><a href="#soins">Nos soins</a></li>
+          <li><a href="#centres">Nos centres</a></li>
+
+          <li>
+            <a
+              class="nav-cta"
+              href="https://wa.me/213770242710?text=Bonjour%20Merzak%20Smile%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+              target="_blank"
+            >
+              Prendre rendez-vous
+            </a>
+          </li>
+        </ul>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="accueil">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="hero-badge">
+            <span></span>
+            Votre sourire, notre priorité
+          </div>
+
+          <h1>
+            Le sourire que vous
+            <em>méritez.</em>
+          </h1>
+
+          <p class="hero-text">
+            Des soins dentaires modernes pensés autour de votre santé,
+            de votre confort et de l'esthétique naturelle de votre sourire.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="https://wa.me/213770242710?text=Bonjour%20Merzak%20Smile%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+              target="_blank"
+              class="btn btn-primary"
+            >
+              Prendre rendez-vous
+              <span>→</span>
+            </a>
+
+            <a href="#soins" class="btn btn-outline">
+              Découvrir nos soins
+            </a>
+
+          </div>
+
+          <div class="hero-features">
+
+            <div class="mini-feature">
+              <span class="mini-feature-check">✓</span>
+              Consultation gratuite
+            </div>
+
+            <div class="mini-feature">
+              <span class="mini-feature-check">✓</span>
+              Ouvert 24h/24
+            </div>
+
+            <div class="mini-feature">
+              <span class="mini-feature-check">✓</span>
+              2 cliniques à Alger
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="hero-main-image">
+            <img
+              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1300&q=85"
+              alt="Clinique dentaire moderne"
+            />
+          </div>
+
+          <div class="hero-floating-card">
+
+            <div class="hero-floating-icon">✦</div>
+
+            <strong>Un sourire naturel</strong>
+
+            <p>
+              Chaque traitement est pensé pour préserver
+              l'harmonie et l'identité de votre sourire.
+            </p>
+
+          </div>
+
+          <div class="hero-open">
+            <small>Disponibilité</small>
+            <strong>24h / 24 • 7j / 7</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <section class="trust-strip">
+
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <strong>24 / 7</strong>
+          <span>Disponibilité</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Kouba</strong>
+          <span>Clinique</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Gué de Constantine</strong>
+          <span>Clinique</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Gratuite</strong>
+          <span>Consultation</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section about" id="clinique">
+
+      <div class="container about-grid">
+
+        <div class="about-images reveal">
+
+          <div class="about-img-main">
+            <img
+              src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe6?auto=format&fit=crop&w=1100&q=85"
+              alt="Cabinet dentaire"
+            />
+          </div>
+
+          <div class="about-img-small">
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=85"
+              alt="Soins dentaires"
+            />
+          </div>
+
+          <div class="about-decoration"></div>
+
+        </div>
+
+
+        <div class="about-content reveal">
+
+          <span class="section-tag">Merzak Smile</span>
+
+          <h2 class="section-title">
+            Prendre soin de votre sourire autrement.
+          </h2>
+
+          <p class="section-description">
+            Merzak Smile vous accompagne dans vos soins dentaires,
+            de la prévention aux traitements esthétiques et prothétiques,
+            dans un environnement moderne et rassurant.
+          </p>
+
+          <div class="about-list">
+
+            <div class="about-row">
+
+              <div class="about-row-icon">01</div>
+
+              <div>
+                <strong>Approche personnalisée</strong>
+                <p>
+                  Un plan de traitement adapté à chaque situation clinique.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="about-row">
+
+              <div class="about-row-icon">02</div>
+
+              <div>
+                <strong>Esthétique & fonctionnalité</strong>
+                <p>
+                  Restaurer le sourire tout en préservant confort et fonction.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="about-row">
+
+              <div class="about-row-icon">03</div>
+
+              <div>
+                <strong>Laboratoire de prothèse</strong>
+                <p>
+                  Une attention particulière portée à la précision
+                  des couronnes, bridges et prothèses.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div style="margin-top:35px">
+
+            <a
+              href="https://wa.me/213770242710?text=Bonjour%20Merzak%20Smile%2C%20j'aimerais%20avoir%20plus%20d'informations%20concernant%20vos%20soins."
+              target="_blank"
+              class="btn btn-primary"
+            >
+              Nous contacter
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section services" id="soins">
+
+      <div class="container">
+
+        <div class="services-head reveal">
+
+          <div>
+            <span class="section-tag">Nos traitements</span>
+
+            <h2 class="section-title">
+              Des soins pour chaque sourire.
+            </h2>
+          </div>
+
+          <p>
+            De la prévention à la restauration complète du sourire,
+            notre clinique propose une prise en charge dentaire globale.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <!-- SERVICE 1 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M12 3v18M7 8h10M8 13h8" />
+              </svg>
+            </div>
+
+            <h3>Implantologie</h3>
+
+            <p>
+              Remplacement d'une ou plusieurs dents manquantes
+              avec une solution implantaire adaptée.
+            </p>
+
+            <a
+              class="service-link"
+              href="https://wa.me/213770242710?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20les%20implants%20dentaires."
+              target="_blank"
+            >
+              Demander des informations →
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 2 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M5 12c2-6 12-6 14 0-2 6-12 6-14 0Z" />
+                <path d="M9 12h6" />
+              </svg>
+            </div>
+
+            <h3>Zirconia & Couronnes</h3>
+
+            <p>
+              Restaurations conçues pour retrouver harmonie,
+              esthétique et fonctionnalité.
+            </p>
+
+            <a
+              class="service-link"
+              href="https://wa.me/213770242710?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20les%20couronnes%20et%20la%20zirconia."
+              target="_blank"
+            >
+              Demander des informations →
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 3 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M4 12c3-5 13-5 16 0" />
+                <path d="M6 15c4 3 8 3 12 0" />
+              </svg>
+            </div>
+
+            <h3>Bridge dentaire</h3>
+
+            <p>
+              Une solution permettant de restaurer les espaces
+              laissés par une ou plusieurs dents absentes.
+            </p>
+
+            <a
+              class="service-link"
+              href="https://wa.me/213770242710?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20les%20bridges%20dentaires."
+              target="_blank"
+            >
+              Demander des informations →
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 4 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="m12 3 1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3Z" />
+                <path d="m18 13 .8 2.2L21 16l-2.2.8L18 19l-.8-2.2L15 16l2.2-.8L18 13Z" />
+              </svg>
+            </div>
+
+            <h3>Blanchiment</h3>
+
+            <p>
+              Des solutions esthétiques pour retrouver
+              un sourire plus lumineux.
+            </p>
+
+            <a
+              class="service-link"
+              href="https://wa.me/213770242710?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20le%20blanchiment%20dentaire."
+              target="_blank"
+            >
+              Demander des informations →
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 5 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M6 5c3 2 9 2 12 0" />
+                <path d="M5 8c1 7 3 11 7 11s6-4 7-11" />
+              </svg>
+            </div>
+
+            <h3>Prothèses dentaires</h3>
+
+            <p>
+              Solutions fixes ou amovibles pour restaurer
+              l'esthétique et la fonction du sourire.
+            </p>
+
+            <a
+              class="service-link"
+              href="https://wa.me/213770242710?text=Bonjour%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20les%20prothèses%20dentaires."
+              target="_blank"
+            >
+              Demander des informations →
+            </a>
+
+          </article>
+
+
+          <!-- SERVICE 6 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M7 4c-2 2-2 5-1 8 1 4 2 8 4 8 1.5 0 1-4 2-4s.5 4 2 4c2 0 3-4 4-8 1-3 1-6-1-8-2-2-3 1-5 1S9 2 7 4Z" />
+              </svg>
+            </div>
+
+            <h3>Soins dentaires</h3>
+
+            <p>
+              Détartrage, traitement des caries,
+              dévitalisation et soins conservateurs.
+            </p>
+
+            <a
+              class="service-link"
+              href="https://wa.me/213770242710?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20un%20soin%20dentaire."
+              target="_blank"
+            >
+              Prendre rendez-vous →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PREMIUM CTA -->
+
+    <section class="smile-section">
+
+      <div class="container">
+
+        <div class="smile-box reveal">
+
+          <div class="smile-content">
+
+            <span class="section-tag">Esthétique du sourire</span>
+
+            <h2>
+              Chaque sourire mérite une attention unique.
+            </h2>
+
+            <p>
+              Après une première consultation, l'équipe détermine
+              avec vous la solution adaptée à vos besoins,
+              votre santé bucco-dentaire et vos attentes.
+            </p>
+
+            <a
+              class="btn btn-gold"
+              target="_blank"
+              href="https://wa.me/213770242710?text=Bonjour%20Merzak%20Smile%2C%20je%20souhaite%20faire%20une%20consultation%20concernant%20mon%20sourire."
+            >
+              Demander une consultation →
+            </a>
+
+          </div>
+
+          <div class="smile-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85"
+              alt="Sourire"
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+
+    <section class="section process">
+
+      <div class="container">
+
+        <div class="process-header reveal">
+
+          <span class="section-tag">Votre parcours</span>
+
+          <h2 class="section-title">
+            Simple, clair et rassurant.
+          </h2>
+
+          <p class="section-description">
+            De votre premier contact au suivi de votre traitement,
+            nous facilitons chaque étape.
+          </p>
+
+        </div>
+
+
+        <div class="process-steps">
+
+          <div class="step reveal">
+
+            <div class="step-number">01</div>
+
+            <h3>Contact</h3>
+
+            <p>
+              Contactez la clinique directement par téléphone ou WhatsApp.
+            </p>
+
+          </div>
+
+
+          <div class="step reveal">
+
+            <div class="step-number">02</div>
+
+            <h3>Consultation</h3>
+
+            <p>
+              Un premier bilan permet d'évaluer vos besoins.
+            </p>
+
+          </div>
+
+
+          <div class="step reveal">
+
+            <div class="step-number">03</div>
+
+            <h3>Plan de soin</h3>
+
+            <p>
+              Les différentes options adaptées à votre situation sont étudiées.
+            </p>
+
+          </div>
+
+
+          <div class="step reveal">
+
+            <div class="step-number">04</div>
+
+            <h3>Suivi</h3>
+
+            <p>
+              Votre prise en charge continue tout au long du traitement.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOCATIONS -->
+
+    <section class="section locations" id="centres">
+
+      <div class="container locations-grid">
+
+        <div class="locations-content reveal">
+
+          <span class="section-tag">Nos cliniques</span>
+
+          <h2 class="section-title">
+            Deux adresses à Alger.
+          </h2>
+
+          <p class="section-description">
+            Choisissez l'établissement le plus proche
+            et contactez directement l'équipe.
+          </p>
+
+
+          <div class="locations-list">
+
+            <!-- KOUBA -->
+
+            <div class="location-card">
+
+              <div class="location-icon">⌖</div>
+
+              <div>
+                <h3>Merzak Smile — Kouba</h3>
+
+                <p>
+                  Lot 074, 1er étage<br>
+                  Lotissement Novion 0021<br>
+                  Kouba, Alger
+                </p>
+
+                <a
+                  href="https://maps.app.goo.gl/F8bfpeKddoCBzE1q8"
+                  target="_blank"
+                >
+                  Voir l'itinéraire →
+                </a>
+              </div>
+
+            </div>
+
+
+            <!-- GUE DE CONSTANTINE -->
+
+            <div class="location-card">
+
+              <div class="location-icon">⌖</div>
+
+              <div>
+                <h3>Merzak Smile — Gué de Constantine</h3>
+
+                <p>
+                  Cité CASNAF N°480 B, 2e étage<br>
+                  Gué de Constantine, Alger
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div style="margin-top:30px">
+
+            <a
+              href="tel:+213770242710"
+              class="btn btn-primary"
+            >
+              Appeler : 0770 24 27 10
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="location-photo reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85"
+            alt="Clinique dentaire Merzak Smile"
+          />
+
+          <div class="location-overlay">
+
+            <small>Merzak Smile</small>
+
+            <strong>Votre clinique à Alger</strong>
+
+            <p>
+              Disponible 24 heures sur 24 et 7 jours sur 7.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- APPOINTMENT -->
+
+    <section class="appointment" id="rendez-vous">
+
+      <div class="container">
+
+        <div class="appointment-content reveal">
+
+          <span class="section-tag">Rendez-vous</span>
+
+          <h2>
+            Votre nouveau sourire peut commencer aujourd'hui.
+          </h2>
+
+          <p>
+            Une question concernant un traitement ?
+            Contactez directement Merzak Smile sur WhatsApp
+            ou par téléphone.
+          </p>
+
+          <div class="appointment-buttons">
+
+            <a
+              href="https://wa.me/213770242710?text=Bonjour%20Merzak%20Smile%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+              target="_blank"
+              class="btn btn-gold"
+            >
+              WhatsApp • 0770 24 27 10
+            </a>
+
+            <a
+              href="tel:+213770242710"
+              class="btn btn-outline"
+            >
+              Appeler la clinique
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+
+            <span class="logo-symbol">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M7.5 3.5C5 4.1 3.7 6.5 4.4 9.1c.5 1.8 1.7 3.1 2 5.4.5 3.4 1.3 5.8 2.7 5.8 1 0 1.1-3.8 2.9-3.8s1.9 3.8 2.9 3.8c1.4 0 2.2-2.4 2.7-5.8.3-2.3 1.5-3.6 2-5.4.7-2.6-.6-5-3.1-5.6-2.2-.5-3.4 1-4.5 1s-2.3-1.5-4.5-1z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+
+            <span class="logo-text">
+              <strong>Merzak Smile</strong>
+              <small>Dental Clinic</small>
+            </span>
+
+          </a>
+
+          <p>
+            Des soins dentaires modernes au service
+            de votre santé et de votre sourire.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">Navigation</div>
+
+          <ul class="footer-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#clinique">La clinique</a></li>
+            <li><a href="#soins">Nos soins</a></li>
+            <li><a href="#centres">Nos centres</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">Soins</div>
+
+          <ul class="footer-links">
+            <li><a href="#soins">Implantologie</a></li>
+            <li><a href="#soins">Zirconia</a></li>
+            <li><a href="#soins">Prothèses</a></li>
+            <li><a href="#soins">Blanchiment</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">Contact</div>
+
+          <div class="footer-contact">
+
+            Kouba • Alger
+
+            <a
+              href="tel:+213770242710"
+              class="footer-phone"
+            >
+              0770 24 27 10
+            </a>
+
+            Disponible 24h/24 • 7j/7
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year"></span> Merzak Smile. Tous droits réservés.
+        </span>
+
+        <span>
+          Kouba • Gué de Constantine • Alger
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+
+  <a
+    class="whatsapp-float"
+    target="_blank"
+    href="https://wa.me/213770242710?text=Bonjour%20Merzak%20Smile%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+    aria-label="Contacter Merzak Smile sur WhatsApp"
+  >
+    <span class="whatsapp-icon">☏</span>
+    <span>Prendre rendez-vous</span>
+  </a>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    // Date automatique
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Header au scroll
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+
+    // Menu mobile
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+
+    // Animations apparition
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
